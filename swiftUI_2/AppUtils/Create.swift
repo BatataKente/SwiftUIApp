@@ -21,7 +21,7 @@ struct Create {
             .foregroundColor(textColor)
     }
     
-    static func image(_ image: String,
+    static func image(_ image: String, imageColor: Color = .white,
                       width: CGFloat? = nil, height: CGFloat? = nil) -> some View {
         
         Image(systemName: image)
@@ -29,6 +29,7 @@ struct Create {
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: width, height: height)
+            .foregroundColor(imageColor)
     }
     
     static func stack(spacing: CGFloat = 0,
