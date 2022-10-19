@@ -27,27 +27,32 @@ struct WheaterView: View {
                         .padding()
                     
                     Create.stack(spacing: 8,
-                                 image: Create.image(Assets.Images.cloudSun,
-                                                     width: 180, height: 180),
+                                 image: Create.systemImage(Assets.Images.cloudSun,
+                                                           width: 180, height: 180),
                                  bottomText: Create.text("76°", size: 70))
                         .padding(.bottom, 40)
                     
                     HStack(spacing: 20) {
                         
                         Create.stack(topText: Create.text("TUE"),
-                                     image: Create.image(Assets.Images.cloudSun, height: 40),
+                                     image: Create.systemImage(Assets.Images.cloudSun,
+                                                               height: 40),
                                      bottomText: Create.text("74°", size: 28))
                         Create.stack(topText: Create.text("WED"),
-                                     image: Create.image(Assets.Images.sunMax, height: 40),
+                                     image: Create.systemImage(Assets.Images.sunMax,
+                                                               height: 40),
                                      bottomText: Create.text("88°", size: 28))
                         Create.stack(topText: Create.text("THU"),
-                                     image: Create.image(Assets.Images.windSnow, height: 40),
+                                     image: Create.systemImage(Assets.Images.windSnow,
+                                                               height: 40),
                                      bottomText: Create.text("55°", size: 28))
                         Create.stack(topText: Create.text("FRI"),
-                                     image: Create.image(Assets.Images.sunset, height: 40),
+                                     image: Create.systemImage(Assets.Images.sunset,
+                                                               height: 40),
                                      bottomText: Create.text("60°", size: 28))
                         Create.stack(topText: Create.text("SAT"),
-                                     image: Create.image(Assets.Images.snow, height: 40),
+                                     image: Create.systemImage(Assets.Images.snow,
+                                                               height: 40),
                                      bottomText: Create.text("25°", size: 28))
                     }
                     
@@ -60,11 +65,8 @@ struct WheaterView: View {
                     }
                     label: {
                         
-                        Create.text("Change Day Time", textColor: .blue,
-                                    size: 20, weight: .black, design: .default)
-                            .frame(width: 200, height: 50)
-                            .background(.yellow)
-                            .cornerRadius(10)
+                        Create.image(Assets.Images.donRamon)
+                            .clipShape(Circle())§d
                     }
                     
                     Spacer()

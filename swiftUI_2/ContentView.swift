@@ -31,9 +31,9 @@ struct ContentView: View {
                             Create.text("Go", textColor: Assets.Colors.reverseDark,
                                         size: 25, weight: .bold)
                             
-                            Create.image(Assets.Images.back,
-                                         imageColor: Assets.Colors.reverseDark,
-                                         height: 20)
+                            Create.systemImage(Assets.Images.back,
+                                               imageColor: Assets.Colors.reverseDark,
+                                               height: 20)
                         }.padding(.trailing, 20)
                     }
                 }
