@@ -9,31 +9,38 @@ import SwiftUI
 
 struct Create {
     
+    static func text(_ text: String, textColor: Color = .white,
+                     size: CGFloat = 16,
+                     weight: Font.Weight = .medium,
+                     design: Font.Design? = nil) -> Text {
+        
+        Text(text)
+            .font(.system(size: size,
+                          weight: weight,
+                          design: design))
+            .foregroundColor(textColor)
+    }
+    
+    static func image(_ image: String,
+                      width: CGFloat? = nil, height: CGFloat? = nil) -> some View {
+        
+        Image(systemName: image)
+            .renderingMode(.original)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: width, height: height)
+    }
+    
     static func stack(spacing: CGFloat = 0,
-                      _ day: String? = nil,
-                      image: String, imageWidth: CGFloat? = nil, imageHeight: CGFloat = 40,
-                      temperature: Int, temperatureSize: CGFloat = 28) -> some View {
-
+                      topText: Text? = nil,
+                      image: some View,
+                      bottomText: Text) -> some View {
+        
         VStack(spacing: spacing) {
-
-            if let day = day {
-
-                Text(day)
-                    .font(.system(size: 16,
-                                  weight: .medium))
-                    .foregroundColor(.white)
-            }
-
-            Image(systemName: image)
-                .renderingMode(.original)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: imageWidth, height: imageHeight)
-
-            Text("\(temperature)°")
-                .font(.system(size: temperatureSize,
-                              weight: .medium))
-                .foregroundColor(.white)
+            
+            if let text = topText {text}
+            image
+            bottomText
         }
     }
 }
