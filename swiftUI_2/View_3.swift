@@ -39,7 +39,7 @@ struct Cell: View {
             
             HStack {
                 
-                Create.image(Assets.Images.donRamon)
+                Create.image(phrase.image ?? Assets.Images.donRamon)
                     .frame(height: 70)
                     .cornerRadius(4)
                     .padding(.vertical, 4)
@@ -51,7 +51,7 @@ struct Cell: View {
                         .lineLimit(2)
                         .minimumScaleFactor(0.5)
                     
-                    Text(phrase.uploadDate ?? "")
+                    Text(phrase.date ?? "")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                 }

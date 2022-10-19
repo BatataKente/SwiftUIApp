@@ -33,11 +33,11 @@ struct View_4: View {
             
             HStack(spacing: 10) {
                 
-                Label("\(phrase.viewCount ?? 0)", systemImage: Assets.Images.eye)
+                Label("0", systemImage: Assets.Images.eye)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                 
-                Text("(\(phrase.uploadDate ?? ""))")
+                Text("(\(phrase.date ?? ""))")
             }
             
             Text(phrase.description ?? "")
