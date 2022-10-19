@@ -9,7 +9,7 @@ import SwiftUI
 
 struct View_3: View {
     
-    let phrases = Phrase.phrases
+    let phrases = Assets.phrases
     
     var body: some View {
             
