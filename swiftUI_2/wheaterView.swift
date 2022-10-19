@@ -27,26 +27,27 @@ struct WheaterView: View {
                         .padding()
                     
                     Create.stack(spacing: 8,
-                                 image: Create.image("cloud.sun.fill", width: 180, height: 180),
+                                 image: Create.image(Assets.Images.cloudSun,
+                                                     width: 180, height: 180),
                                  bottomText: Create.text("76°", size: 70))
                         .padding(.bottom, 40)
                     
                     HStack(spacing: 20) {
                         
                         Create.stack(topText: Create.text("TUE"),
-                                     image: Create.image("cloud.sun.fill", height: 40),
+                                     image: Create.image(Assets.Images.cloudSun, height: 40),
                                      bottomText: Create.text("74°", size: 28))
                         Create.stack(topText: Create.text("WED"),
-                                     image: Create.image("sun.max.fill", height: 40),
+                                     image: Create.image(Assets.Images.sunMax, height: 40),
                                      bottomText: Create.text("88°", size: 28))
                         Create.stack(topText: Create.text("THU"),
-                                     image: Create.image("wind.snow", height: 40),
+                                     image: Create.image(Assets.Images.windSnow, height: 40),
                                      bottomText: Create.text("55°", size: 28))
                         Create.stack(topText: Create.text("FRI"),
-                                     image: Create.image("sunset.fill", height: 40),
+                                     image: Create.image(Assets.Images.sunset, height: 40),
                                      bottomText: Create.text("60°", size: 28))
                         Create.stack(topText: Create.text("SAT"),
-                                     image: Create.image("snow", height: 40),
+                                     image: Create.image(Assets.Images.snow, height: 40),
                                      bottomText: Create.text("25°", size: 28))
                     }
                     

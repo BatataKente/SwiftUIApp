@@ -20,6 +20,11 @@ struct Assets {
         
         static let back = "chevron.right"
         static let donRamon = "Don Ramon"
+        static let cloudSun = "cloud.sun.fill"
+        static let sunMax = "sun.max.fill"
+        static let windSnow = "wind.snow"
+        static let sunset = "sunset.fill"
+        static let snow = "snow"
     }
 }
 
