@@ -15,7 +15,7 @@ struct WheaterView: View {
             
             ZStack {
                 
-                LinearGradient(gradient: Gradient(colors: [Assets.color, .blue]),
+                LinearGradient(gradient: Gradient(colors: [Colors.blue, .blue]),
                                startPoint: .topLeading,
                                endPoint: .bottomTrailing)
                     .edgesIgnoringSafeArea(.all)
@@ -67,7 +67,7 @@ struct WheaterView: View {
                     }
                     
                     Spacer()
-                }.preferredColorScheme(.dark)
+                }
             }
         }
     }
