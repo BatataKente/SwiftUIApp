@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WheaterView: View {
+struct View_2: View {
     
     var body: some View {
         
@@ -69,13 +69,5 @@ struct WheaterView: View {
                 }
             }
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        
-        WheaterView()
     }
 }
