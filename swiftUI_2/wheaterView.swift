@@ -56,8 +56,6 @@ struct WheaterView: View {
                                      bottomText: Create.text("25°", size: 28))
                     }
                     
-                    Spacer()
-                    
                     Button {
 
                         print("Toma!")
@@ -66,10 +64,8 @@ struct WheaterView: View {
                     label: {
                         
                         Create.image(Assets.Images.donRamon)
-                            .clipShape(Circle())§d
+                            .clipShape(Circle())
                     }
-                    
-                    Spacer()
                 }
             }
         }
