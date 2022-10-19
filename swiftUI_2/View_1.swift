@@ -44,6 +44,6 @@ struct View_1: View {
                                    imageColor: Assets.Colors.reverseDark,
                                    height: 20)
             }.padding(.trailing, 20)
-        }
+        }.navigationBarTitle("View_1")
     }
 }

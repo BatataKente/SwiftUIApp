@@ -25,6 +25,7 @@ struct Assets {
         static let windSnow = "wind.snow"
         static let sunset = "sunset.fill"
         static let snow = "snow"
+        static let eye = "eye.fill"
     }
 }
 

@@ -9,14 +9,36 @@ import SwiftUI
 
 struct View_3: View {
     
+    let phrases = Phrase.phrases
+    
     var body: some View {
-        
-        HStack {
             
-            Image(Assets.Images.donRamon)
-                .resizable()
-                .scaledToFit()
-                .background(.red)
+        List(phrases, id: \.id) {phrase in
+            
+            NavigationLink(destination: View_4(phrase)) {
+                
+                HStack {
+                    
+                    Image(Assets.Images.donRamon)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 70)
+                        .cornerRadius(4)
+                        .padding(.vertical, 4)
+                    
+                    VStack(alignment: .leading, spacing: 5) {
+                        
+                        Text(phrase.description ?? "")
+                            .fontWeight(.semibold)
+                            .lineLimit(2)
+                            .minimumScaleFactor(0.5)
+                        
+                        Text(phrase.uploadDate ?? "")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                }
+            }.navigationBarTitle("Toma! 100")
         }
     }
 }
