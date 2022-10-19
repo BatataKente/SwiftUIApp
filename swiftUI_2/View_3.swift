@@ -17,28 +17,45 @@ struct View_3: View {
             
             NavigationLink(destination: View_4(phrase)) {
                 
-                HStack {
-                    
-                    Image(Assets.Images.donRamon)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 70)
-                        .cornerRadius(4)
-                        .padding(.vertical, 4)
-                    
-                    VStack(alignment: .leading, spacing: 5) {
-                        
-                        Text(phrase.description ?? "")
-                            .fontWeight(.semibold)
-                            .lineLimit(2)
-                            .minimumScaleFactor(0.5)
-                        
-                        Text(phrase.uploadDate ?? "")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                    }
-                }
+                Cell(phrase)
+                
             }.navigationBarTitle("Toma! 100")
+        }
+    }
+}
+
+struct Cell: View {
+    
+    var phrase: Phrase
+    
+    init(_ phrase: Phrase) {
+        
+        self.phrase = phrase
+    }
+    
+    var body: some View {
+        
+        HStack {
+            
+            HStack {
+                
+                Create.image(Assets.Images.donRamon)
+                    .frame(height: 70)
+                    .cornerRadius(4)
+                    .padding(.vertical, 4)
+                
+                VStack(alignment: .leading, spacing: 5) {
+                    
+                    Text(phrase.description ?? "")
+                        .fontWeight(.semibold)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.5)
+                    
+                    Text(phrase.uploadDate ?? "")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+            }
         }
     }
 }
