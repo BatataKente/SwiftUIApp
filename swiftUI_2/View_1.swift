@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct View_1: View {
     
     var body: some View {
         
@@ -24,20 +24,26 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    NavigationLink(destination: WheaterView()) {
-                        
-                        HStack {
-                            
-                            Create.text("Go", textColor: Assets.Colors.reverseDark,
-                                        size: 25, weight: .bold)
-                            
-                            Create.systemImage(Assets.Images.back,
-                                               imageColor: Assets.Colors.reverseDark,
-                                               height: 20)
-                        }.padding(.trailing, 20)
-                    }
+                    navigate(to: View_3(), "Go View_3")
+                    navigate(to: View_2(), "Go View_2")
                 }
             }
         }.accentColor(Assets.Colors.reverseDark)
+    }
+    
+    private func navigate(to view: some View,_ title: String) -> some View {
+        
+        NavigationLink(destination: view) {
+            
+            HStack {
+                
+                Create.text(title, textColor: Assets.Colors.reverseDark,
+                            size: 25, weight: .bold)
+                
+                Create.systemImage(Assets.Images.back,
+                                   imageColor: Assets.Colors.reverseDark,
+                                   height: 20)
+            }.padding(.trailing, 20)
+        }
     }
 }
