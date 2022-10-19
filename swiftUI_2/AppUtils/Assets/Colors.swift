@@ -7,15 +7,19 @@
 
 import SwiftUI
 
-struct Colors {
+struct Assets {
     
-    static let blue = Color("lightBlue")
-    static let reverseDark = Color("blackWhite")
-    
+    struct Colors {
+        
+        static let blue = Color("lightBlue")
+        static let reverseDark = Color("blackWhite")
+        
+    }
+
+    struct Images {
+        
+        static let back = "chevron.right"
+        static let donRamon = "Don Ramon"
+    }
 }
 
-struct Images {
-    
-    static let back = "chevron.right"
-    static let donRamon = "Don Ramon"
-}
