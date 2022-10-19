@@ -25,15 +25,15 @@ struct ContentView: View {
                         
                         HStack {
                             
-                            Text("Go")
-                                .foregroundColor(.white)
-                                .font(.system(size: 25, weight: .bold))
+                            Create.text("Go", textColor: Colors.reverseDark,
+                                        size: 25, weight: .bold)
                             
-                            Create.image("chevron.right", height: 20)
+                            Create.image(Images.back, imageColor: Colors.reverseDark,
+                                         height: 20)
                         }.padding(.trailing, 20)
                     }
-                }.preferredColorScheme(.dark)
+                }
             }
-        }.accentColor(.white)
+        }.accentColor(Colors.reverseDark)
     }
 }
