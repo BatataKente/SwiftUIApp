@@ -15,7 +15,10 @@ struct ContentView: View {
             
             ZStack(alignment: .trailing) {
                 
-                Color.blue.ignoresSafeArea()
+                LinearGradient(gradient: Gradient(colors: [Assets.Colors.blue, .blue]),
+                               startPoint: .topLeading,
+                               endPoint: .bottomTrailing)
+                    .edgesIgnoringSafeArea(.all)
                 
                 VStack {
                     
@@ -25,15 +28,16 @@ struct ContentView: View {
                         
                         HStack {
                             
-                            Create.text("Go", textColor: Colors.reverseDark,
+                            Create.text("Go", textColor: Assets.Colors.reverseDark,
                                         size: 25, weight: .bold)
                             
-                            Create.image(Images.back, imageColor: Colors.reverseDark,
-                                         height: 20)
+                            Create.systemImage(Assets.Images.back,
+                                               imageColor: Assets.Colors.reverseDark,
+                                               height: 20)
                         }.padding(.trailing, 20)
                     }
                 }
             }
-        }.accentColor(Colors.reverseDark)
+        }.accentColor(Assets.Colors.reverseDark)
     }
 }

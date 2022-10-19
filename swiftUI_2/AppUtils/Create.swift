@@ -24,6 +24,17 @@ struct Create {
     static func image(_ image: String, imageColor: Color = .white,
                       width: CGFloat? = nil, height: CGFloat? = nil) -> some View {
         
+        Image(image)
+            .renderingMode(.original)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: width, height: height)
+            .foregroundColor(imageColor)
+    }
+    
+    static func systemImage(_ image: String, imageColor: Color = .white,
+                            width: CGFloat? = nil, height: CGFloat? = nil) -> some View {
+        
         Image(systemName: image)
             .renderingMode(.original)
             .resizable()
