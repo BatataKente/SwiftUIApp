@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct View_2: View {
+struct WheaterView: View {
     
     var body: some View {
         

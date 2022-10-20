@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct View_3: View {
+struct MadrugaView: View {
     
     let phrases = Assets.phrases
     
@@ -15,7 +15,7 @@ struct View_3: View {
             
         List(phrases, id: \.id) {phrase in
             
-            NavigationLink(destination: View_4(phrase)) {
+            NavigationLink(destination: MadrugaDetailsView(phrase)) {
                 
                 Cell(phrase)
                 

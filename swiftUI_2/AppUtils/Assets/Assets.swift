@@ -13,19 +13,28 @@ struct Assets {
         
         static let blue = Color("lightBlue")
         static let reverseDark = Color("blackWhite")
-        
+        static let pink = Color("JokenpoPink")
     }
 
     struct Images {
         
         static let back = "chevron.right"
+        static let eye = "eye.fill"
+        
         static let donRamon = "Don Ramon"
+        
         static let cloudSun = "cloud.sun.fill"
         static let sunMax = "sun.max.fill"
         static let windSnow = "wind.snow"
         static let sunset = "sunset.fill"
         static let snow = "snow"
-        static let eye = "eye.fill"
+        
+        static let versus = "VS"
+        static let stone = "0"
+        static let paper = "1"
+        static let scissors = "2"
+        static let lizard = "3"
+        static let spok = "4"
     }
     
     static let phrases: [Phrase] = [Phrase(image: Assets.Images.donRamon,
