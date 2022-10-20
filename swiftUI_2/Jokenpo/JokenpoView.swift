@@ -41,7 +41,7 @@ struct JokenpoView: View {
                 Spacer()
                 
                 HStack {
-                    
+
                     Create.text("Victory: \(score.victory) - Draw: \(score.draw) - Lose: \(score.lose)",
                                 textColor: Assets.Colors.reverseDark,
                                 size: 25)
