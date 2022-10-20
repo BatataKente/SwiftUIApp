@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct View_0: View {
+struct MainMenuView: View {
     
     var body: some View {
         
@@ -27,7 +27,7 @@ struct View_0: View {
                     navigate(to: NewsView())
                     navigate(to: WheaterView())
                     navigate(to: MadrugaView())
-                    navigate(to: View_5())
+                    navigate(to: JokenpoView())
                         .navigationTitle("Main Menu")
                 }
             }
