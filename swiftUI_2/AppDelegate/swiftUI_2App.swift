@@ -14,7 +14,7 @@ struct swiftUI_2App: App {
         
         WindowGroup {
             
-            View_1()
+            View_0()
         }
     }
 }

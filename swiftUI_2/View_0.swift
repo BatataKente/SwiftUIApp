@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct View_1: View {
+struct View_0: View {
     
     var body: some View {
         
@@ -24,16 +24,20 @@ struct View_1: View {
                     
                     Spacer()
                     
-                    navigate(to: View_3(), "Go View_3")
-                    navigate(to: View_2(), "Go View_2")
+                    navigate(to: NewsView())
+                    navigate(to: View_2())
+                    navigate(to: View_3())
+                        .navigationTitle("Main Menu")
                 }
             }
         }.accentColor(Assets.Colors.reverseDark)
     }
     
-    private func navigate(to view: some View,_ title: String) -> some View {
+    private func navigate(to view: some View) -> some View {
         
-        NavigationLink(destination: view) {
+        let title = "\(type(of: view))"
+        
+        return NavigationLink(destination: view) {
             
             HStack {
                 
@@ -44,6 +48,6 @@ struct View_1: View {
                                    imageColor: Assets.Colors.reverseDark,
                                    height: 20)
             }.padding(.trailing, 20)
-        }.navigationBarTitle("View_1")
+        }
     }
 }
