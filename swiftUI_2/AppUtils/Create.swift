@@ -21,7 +21,18 @@ struct Create {
             .foregroundColor(textColor)
     }
     
-    static func image(_ image: String, imageColor: Color = .white,
+    static func dataImage(_ image: UIImage, background: Color? = nil,
+                          width: CGFloat? = nil, height: CGFloat? = nil) -> some View {
+        
+        Image(uiImage: image)
+            .renderingMode(.original)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: width, height: height)
+            .background(background)
+    }
+    
+    static func image(_ image: String, background: Color? = nil,
                       width: CGFloat? = nil, height: CGFloat? = nil) -> some View {
         
         Image(image)
@@ -29,7 +40,7 @@ struct Create {
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: width, height: height)
-            .foregroundColor(imageColor)
+            .background(background)
     }
     
     static func systemImage(_ image: String, imageColor: Color = .white,
@@ -53,6 +64,33 @@ struct Create {
             if let text = topText {text}
             image
             bottomText
+        }
+    }
+}
+
+struct DataImage: View {
+    
+    let url: String
+    
+    @State var data: Data?
+    
+    var body: some View {
+        
+        if let data = data,
+           let image = UIImage(data: data){
+            
+            Create.dataImage(image, background: .gray, width: 130, height: 70)
+        }
+        else {
+            
+            Create.image(Assets.Images.donRamon, width: 130, height: 70)
+                .onAppear {
+                    
+                    NetWork.call(from: url) {data in
+                        
+                        self.data = data
+                    }
+            }
         }
     }
 }
