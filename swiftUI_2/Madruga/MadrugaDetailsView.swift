@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct View_4: View {
+struct MadrugaDetailsView: View {
     
     let phrase: Phrase
     

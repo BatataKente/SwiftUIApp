@@ -25,8 +25,9 @@ struct View_0: View {
                     Spacer()
                     
                     navigate(to: NewsView())
-                    navigate(to: View_2())
-                    navigate(to: View_3())
+                    navigate(to: WheaterView())
+                    navigate(to: MadrugaView())
+                    navigate(to: View_5())
                         .navigationTitle("Main Menu")
                 }
             }
