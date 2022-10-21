@@ -21,9 +21,9 @@ struct JokenpoView: View {
             VStack {
                 
                 ScrollView(.horizontal) {
-                        
+
                     HStack {
-                        
+
                         jokenpo(Assets.Images.stone)
                         jokenpo(Assets.Images.paper)
                         jokenpo(Assets.Images.scissors)
