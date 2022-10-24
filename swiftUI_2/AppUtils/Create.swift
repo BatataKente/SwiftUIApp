@@ -86,8 +86,15 @@ struct DataImage: View {
             Create.image(Assets.Images.donRamon, width: 130, height: 70)
                 .onAppear {
                     
+//                    Task {
+//
+//                        guard let data = await NetWork.call(from: url) else {return}
+//
+//                        self.data = data
+//                    }
+                    
                     NetWork.call(from: url) {data in
-                        
+
                         self.data = data
                     }
             }
