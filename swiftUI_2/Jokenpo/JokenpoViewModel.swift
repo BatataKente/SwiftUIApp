@@ -48,4 +48,15 @@ class JokenpoViewModel: ObservableObject {
                 .frame(width: 128, height: 128)
         }
     }
+    
+    func buttons(_ images: [String]) -> HStack<some View> {
+        
+        HStack {
+            
+            ForEach(images, id: \.self) {image in
+                
+                self.button(image)
+            }
+        }
+    }
 }

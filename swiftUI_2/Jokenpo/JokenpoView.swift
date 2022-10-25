@@ -21,14 +21,11 @@ struct JokenpoView: View {
                     
                 ScrollView(.horizontal) {
 
-                    HStack {
-
-                        jokenpoViewModel.button(Assets.Images.stone)
-                        jokenpoViewModel.button(Assets.Images.paper)
-                        jokenpoViewModel.button(Assets.Images.scissors)
-                        jokenpoViewModel.button(Assets.Images.lizard)
-                        jokenpoViewModel.button(Assets.Images.spok)
-                    }
+                    jokenpoViewModel.buttons([Assets.Images.stone,
+                                              Assets.Images.paper,
+                                              Assets.Images.scissors,
+                                              Assets.Images.lizard,
+                                              Assets.Images.spok])
                 }
                 
                 Image(Assets.Images.versus)
