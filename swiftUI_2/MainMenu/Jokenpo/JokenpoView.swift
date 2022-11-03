@@ -11,6 +11,17 @@ struct JokenpoView: View {
     
     @StateObject private var jokenpoViewModel = JokenpoViewModel()
     
+    init() {
+        
+        Task {
+            
+            guard let data = await WebService.call(from: "https://www.omdbapi.com/?s=Batman&page=2&apikey=") else {return}
+            guard let batman = WebService.decode(Batman.self, from: data) else {return}
+            
+            print(batman)
+        }
+    }
+    
     var body: some View {
         
         ZStack {
