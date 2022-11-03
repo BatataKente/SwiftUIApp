@@ -24,17 +24,17 @@ struct MainMenuView: View {
                     
                     Spacer()
                     
-                    navigate(to: NewsView())
-                    navigate(to: WheaterView())
-                    navigate(to: MadrugaView())
-                    navigate(to: JokenpoView())
+                    button(to: NewsView())
+                    button(to: WheaterView())
+                    button(to: MadrugaView())
+                    button(to: JokenpoView())
                         .navigationTitle("Main Menu")
                 }
             }
         }.accentColor(Assets.Colors.reverseDark)
     }
     
-    private func navigate(to view: some View) -> some View {
+    private func button(to view: some View) -> some View {
         
         let title = "\(type(of: view))"
         

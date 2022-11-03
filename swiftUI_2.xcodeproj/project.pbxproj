@@ -153,10 +153,6 @@
 				148687A528FF5A96000C3EBA /* AppUtils */,
 				148687A428FF5A8A000C3EBA /* AppDelegate */,
 				14DC8BC82903413000D14096 /* MainMenu */,
-				14C76FF7290199CC00161086 /* News */,
-				14DC8BC72903411F00D14096 /* Wheater */,
-				14C76FFA2901A91400161086 /* Madruga */,
-				14A172FA2901CD07004B2E43 /* Jokenpo */,
 				14D4D25828FF2359009DA777 /* Preview Content */,
 			);
 			path = swiftUI_2;
@@ -181,6 +177,10 @@
 		14DC8BC82903413000D14096 /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
+				14A172FA2901CD07004B2E43 /* Jokenpo */,
+				14C76FFA2901A91400161086 /* Madruga */,
+				14DC8BC72903411F00D14096 /* Wheater */,
+				14C76FF7290199CC00161086 /* News */,
 				147C41342900150100957284 /* MainMenuView.swift */,
 			);
 			path = MainMenu;
